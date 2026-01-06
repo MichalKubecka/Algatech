@@ -25,3 +25,12 @@ Please use __manual configuration__.
 * If the client reports an error during automatic testing:
     * choose __Manual configuration__ or __Advanced configuration__
     * continue anyway — the settings are correct
+
+### Other working Outlook configurations
+<p align="center">
+    <img src="./img/outlook_server1.png" style="width:100%;">
+</p>
+
+<p align="center">
+    <img src="./img/outlook_server2.png" style="width:100%;">
+</p>
