@@ -17,7 +17,10 @@ goto :eof
 
 REM Connect all drives
 call :mount H: home\%USERNAME%
-call :mount L: microscop
+REM call :mount ?: biotech 
+REM call :mount R: cycles
+REM call :mount L: microscop
+REM call :mount M: photosyn
 call :mount P: programs
 call :mount S: data
 
