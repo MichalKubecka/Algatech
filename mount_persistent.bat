@@ -3,15 +3,17 @@ REM @file mount_persistent.bat
 REM @author kubecka@alga.cz
 REM @brief Batch script to mount Algatech drives
 
-REM defvar
-set USERNAME=login
+REM Read username from keyboard
+set /p USERNAME=Username: 
 
 set SERVER=192.168.1.2
 
 goto :end-mount
 :mount
-net use %1 /delete /y 2>nul
-net use %1 \\%SERVER%\%2 /persistent:yes /savecred
+net use %~1 /delete /y 2>nul
+net use %~1 "\\%SERVER%\%~2" /user:%USERNAME% /persistent:yes /savecred
+timeout /t 1 /nobreak >nul
+REM goto :eof ... equivalent to return from a function -> go back to the call
 goto :eof
 :end-mount
 
